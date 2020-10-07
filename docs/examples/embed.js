@@ -5,7 +5,7 @@
  */
 
 // Extract the required classes from the discord.js module
-const { Client, MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require("discord.js")
 
 // Create an instance of a Discord client
 const client = new Client();
@@ -32,6 +32,7 @@ client.on('message', message => {
       // Set the main content of the embed
       .setDescription('Hello, this is a slick embed!');
     // Send the embed to the same channel as the message
+    .setFooter('The coolest Embed')
     message.channel.send(embed);
   }
 });
